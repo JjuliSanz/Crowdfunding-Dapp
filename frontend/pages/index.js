@@ -96,9 +96,7 @@ const Index = () => {
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
           data: formData,
           headers: {
-            // pinata_api_key: `9d03a2850c7a2c190538`,
             pinata_api_key: `e059cbf3522e6cc22ecb`,
-            // pinata_secret_api_key: `19df2cf3af00256fc86448cee4cd5796e58acb0dcd62ba86090c28aaad4efba5`,
             pinata_secret_api_key: `106c3b2bc7f8ae38b167190cb5e0827acb0864511613e16b79b31d5f6a5634ae`,
             "Content-Type": "multipart/form-data",
           },

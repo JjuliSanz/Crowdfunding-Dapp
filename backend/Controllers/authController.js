@@ -69,17 +69,16 @@ exports.getUsers = async (req, res, next) => {
   try {
     const users = await User.find();
     res.status(200).json({
-      status: 'success',
+      status: "success",
       data: {
         users,
       },
     });
   } catch (error) {
     res.status(500).json({
-      status: 'fail',
-      message: 'Failed to fetch users',
+      status: "fail",
+      message: "Failed to fetch users",
       error: error.message,
     });
   }
 };
-

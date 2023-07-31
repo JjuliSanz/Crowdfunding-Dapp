@@ -33,7 +33,6 @@ const Card = ({ setNotification, image, index }) => {
             onClick={() => (
               setNotification("Successfully copied"),
               navigator.clipboard.writeText(image.owner)
-              // navigator.clipboard.writeText("Successfully copied")
             )}
           >
             {image.owner.slice(0, 25)}...
@@ -51,7 +50,6 @@ const Card = ({ setNotification, image, index }) => {
           onClick={() => (
             setNotification("Image URL is Successfully copied"),
             navigator.clipboard.writeText(image.image)
-            // navigator.clipboard.writeText('Image URL is Successfully copied')
           )}
           className={Style.btn}
         >

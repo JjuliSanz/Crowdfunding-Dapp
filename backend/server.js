@@ -1,43 +1,3 @@
-// const mongoose = require("mongoose");
-// const next = require("next");
-// const dotenv = require("dotenv");
-
-// const dev = process.env.NODE_ENV !== "production";
-// const nextServer = next({ dev });
-// const handle = nextServer.getRequestHandler();
-
-// dotenv.config();
-// const app = require("./Api/app");
-
-// const DB = process.env.MONGODB_URI;
-// const port = parseInt(process.env.PORT, 10) || 3000;
-
-// const startServer = async () => {
-//   try {
-//     // Conexión a la base de datos
-//     await mongoose.connect(DB);
-//     console.log("DB connection successful!");
-
-//     // Preparar el servidor Next.js
-//     await nextServer.prepare();
-
-//     // Configurar las rutas de Next.js
-//     app.get("*", (req, res) => {
-//       return handle(req, res);
-//     });
-
-//     // Iniciar el servidor de Express
-//     app.listen(port, "0.0.0.0", () => {
-//       console.log(`App running on port ${port}...`);
-//     });
-//   } catch (error) {
-//     // Capturar y manejar errores
-//     console.error("Error en la inicialización del servidor:", error);
-//   }
-// };
-
-// startServer();
-
 const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
@@ -54,7 +14,7 @@ const port = process.env.PORT || 3000;
 const DB = process.env.MONGODB_URI;
 
 const corsOptions = {
-  origin: "https://crowdfunding-web3-swart.vercel.app",
+  origin: "https://crowdfunding-dapp-web3.vercel.app/",
   credentials: true,
 };
 

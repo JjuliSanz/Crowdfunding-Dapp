@@ -8,10 +8,6 @@ const Header = ({ notification, setNotification }) => {
       name: "Home",
       link: "/",
     },
-    // {
-    //   name: "API",
-    //   link: "/nfts-api",
-    // },
   ];
   const [signup, setSignup] = useState(false);
   const [login, setLogin] = useState(false);
