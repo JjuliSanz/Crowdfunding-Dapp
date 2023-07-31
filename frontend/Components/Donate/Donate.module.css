@@ -1,0 +1,145 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 0.4rem;
+  background-color: #171717;
+  border-radius: 20px;
+}
+
+.heading {
+  text-align: center;
+  margin: 2rem;
+  background: var(--primary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 25px;
+  color: #fff;
+  padding: 0.6rem;
+  border: none;
+  outline: none;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input_icon {
+  height: 1.3rem;
+  width: 1.3rem;
+  fill: var(--primary-color);
+}
+
+.input_field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--primary-color);
+  height: 3rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.form .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.button1 {
+  padding: 0.5rem;
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background: var(--gradient-background);
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-image: linear-gradient(
+    163deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+  color: rgb(76, 191, 245);
+}
+
+.button2 {
+  padding: 0.5rem;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background: var(--gradient-background);
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.button2:hover {
+  background-image: linear-gradient(
+    -45deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+  color: rgb(76, 191, 245);
+}
+
+.button3 {
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background: var(--gradient-background);
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.button3:hover {
+  background-image: linear-gradient(
+    -45deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+  color: rgb(76, 191, 245);
+}
+
+.card {
+  background-image: var(--gradient-background);
+  border-radius: 22px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.card2 {
+  border-radius: 22px;
+  transition: all 0.3s;
+}
+
+.card2:hover {
+  transform: scale(0.94);
+}
