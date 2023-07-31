@@ -57,7 +57,7 @@ export const StateContextProvider = ({ children }) => {
 
       const response = await axios({
         method: "POST",
-        url: `https://backend-crowdfunding.onrender.com/api/v1/nfts/create`,
+        url: `https://d-crowdfunding-backend.onrender.com/api/v1/nfts/create`,
         data: {
           title: title,
           description: description,
@@ -141,7 +141,7 @@ export const StateContextProvider = ({ children }) => {
   const getAllNftsAPI = async () => {
     const response = await axios({
       method: "GET",
-      url: "https://backend-crowdfunding.onrender.com/api/v1/nfts",
+      url: "https://d-crowdfunding-backend.onrender.com/api/v1/nfts",
     });
     console.log("getAllNftsAPI", response);
     return response;
@@ -150,7 +150,7 @@ export const StateContextProvider = ({ children }) => {
   const getSingleNftsAPI = async (id) => {
     const response = await axios({
       method: "GET",
-      url: `/api/v1/nfts/${id}`,
+      url: `https://d-crowdfunding-backend.onrender.com/api/v1/nfts/${id}`,
     });
     console.log("getSingleNftsAPI", response);
     return response;

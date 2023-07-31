@@ -30,7 +30,7 @@ const SignUp = ({ setLogin, setSignup, notification, setNotification }) => {
     try {
       const response = await axios({
         method: "POST",
-        url: `https://backend-crowdfunding.onrender.com/api/v1/user/signup`,
+        url: `https://d-crowdfunding-backend.onrender.com/api/v1/user/signup`,
         withCredentials: true,
         data: {
           name: user.name,
