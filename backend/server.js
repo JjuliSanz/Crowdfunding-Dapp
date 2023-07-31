@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 const DB = process.env.MONGODB_URI;
 
 const corsOptions = {
-  origin: "https://crowdfunding-dapp-web3.vercel.app/",
+  origin: "https://crowdfunding-dapp-web3.vercel.app",
   credentials: true,
 };
 
