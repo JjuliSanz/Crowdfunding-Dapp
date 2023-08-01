@@ -49,7 +49,7 @@ const Index = () => {
       setAllImages(images);
 
       const apiImages = await getAllNftsAPI();
-      console.log("apiImages", apiImages);
+      // console.log("apiImages", apiImages);
     } catch (error) {
       console.log("error en la carga de imagenes", error);
     }
@@ -63,7 +63,7 @@ const Index = () => {
     if (allImages.length === 0) {
       console.log("Loading");
     } else {
-      console.log("allImages", allImages);
+      // console.log("allImages", allImages);
       allImages.map((el) => oldImages.push(el));
     }
   }, [allImages]);

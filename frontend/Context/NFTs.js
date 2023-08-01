@@ -80,13 +80,13 @@ export const StateContextProvider = ({ children }) => {
 
   const getUploadedImages = async () => {
     const images = await contract.call("getAllNFTs");
-    console.log("getAllNFTs", images);
+    // console.log("getAllNFTs", images);
 
     const totalUpload = await contract.call("imagesCount");
-    console.log("imagesCount", totalUpload);
+    // console.log("imagesCount", totalUpload);
 
     const listingPrice = await contract.call("listingPrice");
-    console.log("listingPrice", listingPrice);
+    // console.log("listingPrice", listingPrice);
 
     const allImages = images.map((images, i) => ({
       owner: images.creator,
@@ -143,7 +143,7 @@ export const StateContextProvider = ({ children }) => {
       method: "GET",
       url: "https://d-crowdfunding-backend.onrender.com/api/v1/nfts",
     });
-    console.log("getAllNftsAPI", response);
+    // console.log("getAllNftsAPI", response);
     return response;
   };
 
@@ -152,7 +152,7 @@ export const StateContextProvider = ({ children }) => {
       method: "GET",
       url: `https://d-crowdfunding-backend.onrender.com/api/v1/nfts/${id}`,
     });
-    console.log("getSingleNftsAPI", response);
+    // console.log("getSingleNftsAPI", response);
     return response;
   };
 

@@ -67,36 +67,14 @@ const Filter = ({
   }, [activeSelect]);
 
   return (
-    <div className={Style.inputFilter}>
-      <div className={Style.inputFilter_box}>
-        <Image src={images.search} width={20} height={20} alt="filter"/>
-        <input
-          type="text"
-          placeholder="search address"
-          onChange={(e) => setDebouncedSearch(e.target.value)}
-          value={debouncedSearch}
-        />
-      </div>
-
-      <div
-        className={Style.toggleFilter}
-        onClick={() => (toggle ? setToggle(false) : setToggle(true))}
-      >
-        <div className={Style.toggleFilter_title}>
-          <h4>{activeSelect}</h4>
-          <Image src={images.arrow} width={10} height={10} alt="filterArrow"/>
-        </div>
-
-        {toggle && (
-          <div className={Style.toggleFilter_box}>
-            {filter.map((el, i) => (
-              <p key={i} onClick={() => setActiveSelect(el.name)}>
-                {el.name}
-              </p>
-            ))}
-          </div>
-        )}
-      </div>
+    <div className={Style.inputFilter_box}>
+      <Image src={images.search} width={20} height={20} alt="filter" />
+      <input
+        type="text"
+        placeholder="search address"
+        onChange={(e) => setDebouncedSearch(e.target.value)}
+        value={debouncedSearch}
+      />
     </div>
   );
 };

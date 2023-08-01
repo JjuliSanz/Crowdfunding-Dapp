@@ -46,7 +46,7 @@ const ImageDetail = () => {
     setLoading(true);
     await donateFund({
       amount: ethers.utils.parseUnits(support, 18),
-      Id: query.image,
+      id: query.image,
     });
   };
 
