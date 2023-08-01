@@ -88,6 +88,7 @@ const Index = () => {
     setLoading(true);
     if (file) {
       try {
+        setNotification("Uploading file..."); 
         const formData = new FormData();
         formData.append("file", file);
 
@@ -108,8 +109,12 @@ const Index = () => {
           category: category,
         });
         setFile(null);
+        setLoading(false);
+        setNotification("File uploaded successfully!");
       } catch (error) {
         console.log(error);
+        setLoading(false);
+        setNotification("Error uploading file!"); 
       }
     }
     setFile(null);
@@ -142,41 +147,47 @@ const Index = () => {
 
       {/* UPLOAD */}
       <div className="upload">
-        <Upload
-          onImageChange={onImageChange}
-          display={display}
-          address={address}
-          retrieveFile={retrieveFile}
-        />
-        <div className="upload-info">
-          <h1>Welcome to NFTs IPFS Upload</h1>
-          <p>
-            Our products help you securely distribute any type of media at
-            scale, freeing you from restrictive platforms, middlemen, and
-            algorithms that limit your creative agency.
-          </p>
-          <div className="avatar">
-            <Button
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <Upload
+              onImageChange={onImageChange}
+              display={display}
               address={address}
-              disconnect={disconnect}
-              connect={connect}
-              file={file}
+              retrieveFile={retrieveFile}
             />
-
-            {address && (
+            <div className="upload-info">
+              <h1>Welcome to NFTs IPFS Upload</h1>
               <p>
-                <Image
-                  className="avatar_img"
-                  src={images.client1}
-                  width={40}
-                  height={40}
-                  onClick={() => setOpenProfile(true)}
-                  alt="avatar"
-                />
+                Our products help you securely distribute any type of media at
+                scale, freeing you from restrictive platforms, middlemen, and
+                algorithms that limit your creative agency.
               </p>
-            )}
-          </div>
-        </div>
+              <div className="avatar">
+                <Button
+                  address={address}
+                  disconnect={disconnect}
+                  connect={connect}
+                  file={file}
+                />
+
+                {address && (
+                  <p>
+                    <Image
+                      className="avatar_img"
+                      src={images.client1}
+                      width={40}
+                      height={40}
+                      onClick={() => setOpenProfile(true)}
+                      alt="avatar"
+                    />
+                  </p>
+                )}
+              </div>
+            </div>
+          </>
+        )}
       </div>
       <h1 className="subheading">All NFTs of Marketplace</h1>
 

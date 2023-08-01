@@ -20,7 +20,7 @@
 }
 
 .image_img:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .detail_box {
@@ -36,6 +36,7 @@
 
 .para_small {
   padding-left: 1rem;
+  cursor: pointer;
 }
 
 .info {

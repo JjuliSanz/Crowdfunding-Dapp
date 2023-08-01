@@ -61,7 +61,7 @@ const Product = ({
                 navigator.clipboard.writeText(image?.creator)
               )}
             >
-              {image?.creator.slice(0, 30)}...
+              {image?.creator}
             </small>
           </span>
         </div>
@@ -74,7 +74,7 @@ const Product = ({
           className={BTNStyle.button}
         >
           <span className={`${BTNStyle.button_content} ${Style.btn}`}>
-            Copy URL
+            Copy Image URL
           </span>
         </button>
 

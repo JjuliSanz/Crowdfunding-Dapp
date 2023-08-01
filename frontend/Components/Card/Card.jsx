@@ -20,6 +20,7 @@ const Card = ({ setNotification, image, index }) => {
             />
           </p>
         </a>
+        <p className={Style.title}>{image.title}</p>
         <span className={Style.para}>
           <Image
             className="avatar_img"

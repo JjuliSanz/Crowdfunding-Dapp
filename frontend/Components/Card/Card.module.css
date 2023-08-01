@@ -32,12 +32,20 @@
   font-size: 32px;
 }
 
+.content .title {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+  text-decoration: underline;
+}
+
 .content .para {
   line-height: 1.5;
 }
 
 .para_small {
   padding-left: 1rem;
+  cursor: pointer;
 }
 
 .content .btn {
