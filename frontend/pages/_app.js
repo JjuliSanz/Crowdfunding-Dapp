@@ -1,15 +1,22 @@
 import "../styles/globals.css";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import { StateContextProvider } from "../Context/NFTs";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThirdwebProvider activeChain={ChainId.Mumbai}>
-      {" "}
-      <StateContextProvider>
+    <>
+      <Head>
+        <link rel="icon" href="/icon.png" />
+        <title>Crowdfunding-Dapp</title>
+      </Head>
+      <ThirdwebProvider activeChain={ChainId.Mumbai}>
         {" "}
-        <Component {...pageProps} />
-      </StateContextProvider>
-    </ThirdwebProvider>
+        <StateContextProvider>
+          {" "}
+          <Component {...pageProps} />
+        </StateContextProvider>
+      </ThirdwebProvider>
+    </>
   );
 }
